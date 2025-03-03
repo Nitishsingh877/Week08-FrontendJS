@@ -82,5 +82,128 @@ function coinFlip() {
         
     }
 }
-coinFlip();
+//coinFlip();
+
+
+// //Selection Practice Problems with if else if and else
+
+// 1. Read a single digit number and write the number in word
+function wordsNumber(num){
+    if(num> 9 || num < 0){
+        console.log("Inavalid number Enter between 0 to 9");
+    }else if (num === 1){
+        console.log("One");
+    }
+    else if (num === 2){
+        console.log("Two");
+    }
+    else if (num === 3){
+        console.log("Three");
+    }
+    else if (num === 4){
+        console.log("Four");
+    }
+    else if (num === 5){
+        console.log("Five");
+    }
+    else if (num === 6){
+        console.log("Six");
+    }
+    else if (num === 7){
+        console.log("Seven");
+    }
+    else if (num === 8){
+        console.log("Eight");
+    }
+    else if (num === 9){
+        console.log("Nine");
+    }
+    else {
+        console.log("Invalid");
+        
+    }
+}
+function callNumber(){
+    const number = process.argv.slice(2);
+
+    const num1 = parseInt(number);
+    wordsNumber(num1);
+   
+    
+}
+//callNumber();
+
+
+// 2. Read a Number and Display the week day (Sunday, Monday,...)
+//doone
+// 3. Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+function getPlaceValue(number) {
+    if (number === 1) {
+      return "unit";
+    } else if (number === 10) {
+      return "ten";
+    } else if (number === 100) {
+      return "hundred";
+    } else if (number === 1000) {
+      return "thousand";
+    } else if (number === 10000) {
+      return "ten thousand";
+    } else if (number === 100000) {
+      return "hundred thousand";
+    } else if (number === 1000000) {
+      return "million";
+    } else {
+      return "Invalid input or very large number";
+    }
+  }
+
+  function callGetPlaceValue() {
+    const args = process.argv.slice(2);
+    
+    const num2 = parseInt(args);
+    console.log(getPlaceValue(num2));
+  }
+ // callGetPlaceValue();
+
+
+
+// 4. Enter 3 Numbers do following arithmetic operation and find the one that
+
+// is maximum and minimum
+// 1. a + b * c 3. c + a / b
+// 2. a % b + c 4. a * b + c
+
+function calculateAndFindMaxMin(a, b, c) {
+    // Calculate the four arithmetic operations
+    const result1 = a + b * c;
+    const result2 = a % b + c;
+    const result3 = c + a / b;
+    const result4 = a * b + c;
+  
+    // Store the results in an array
+    const results = [result1, result2, result3, result4];
+  
+    // Find the maximum and minimum values
+    console.log("result is " + results);
+    
+    const max = Math.max(...results);
+    console.log("Greatest is "  + max);
+    
+    const min = Math.min(...results);
+    console.log("smallest is " + min);
+}
+
+function callCalculateAndFindMaxMin(){
+    const args = process.argv.slice(2,5);
+
+    const a = parseInt(args[0]);
+    const b = parseInt(args[1]);
+    const c = parseInt(args[2]);
+
+    calculateAndFindMaxMin(a,b,c);
+}
+callCalculateAndFindMaxMin();
+
+
+
 
