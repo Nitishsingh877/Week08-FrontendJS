@@ -202,8 +202,109 @@ function callCalculateAndFindMaxMin(){
 
     calculateAndFindMaxMin(a,b,c);
 }
-callCalculateAndFindMaxMin();
+
+//callCalculateAndFindMaxMin();
 
 
+// 1. Read a single digit number and write the number in word using Case
+function getNumberInWords(numm){
+    let word;
+    switch(numm){
+    case 0:
+        word = "zero";
+        break;
+    case 1:
+        word = "One";
+        break;
+    case 2:
+        word = "Two";
+        break;
+      case 3:
+        word = "Three";
+        break;
+      case 4:
+        word = "Four";
+        break;
+      case 5:
+        word = "Five";
+        break;
+      case 6:
+        word = "Six";
+        break;
+      case 7:
+        word = "Seven";
+        break;
+      case 8:
+        word = "Eight";
+        break;
+      case 9:
+        word = "Nine";
+        break;
+      default:
+        word = "Invalid number";
+    }
+  
+    return word;
+  }
+
+  function callGetInNumber(){
+    const args = process.argv.slice(2);
+
+    const numm = parseInt(args[0]);
+
+    console.log(getNumberInWords(numm));
+
+  }
+ // callGetInNumber();
+
+// 2. Read a Number and Display the week day (Sunday, Monday,...)
+
+function getDayName(dayNumber) {
+    let dayName;
+  
+    switch (dayNumber) {
+      case 1:
+        dayName = "Monday";
+        break;
+      case 2:
+        dayName = "Tuesday";
+        break;
+      case 3:
+        dayName = "Wednesday";
+        break;
+      case 4:
+        dayName = "Thursday";
+        break;
+      case 5:
+        dayName = "Friday";
+        break;
+      case 6:
+        dayName = "Saturday";
+        break;
+      case 7:
+        dayName = "Sunday";
+        break;
+      default:
+        dayName = "Invalid day number";
+    }
+  
+    return dayName;
+  }
+
+  function callGetDayName(){
+    const args = process.argv.slice(2);
+
+    const dayNumber = parseInt(args[0])
+    
+  }
 
 
+// 3. Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+
+console.log("same as above");
+
+// 4. Write a program that takes User Inputs and does Unit Conversion of
+
+// different Length units
+// 1. Feet to Inch 3. Inch to Feet
+// 2. Feet to Meter 4. Meter to Feet
